@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const Header = () => {
-  window.localStorage.setItem('theme', 'light');
   const activeSection = 'Home';
   return (
     <header className='z-[999] relative'>

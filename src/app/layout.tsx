@@ -1,19 +1,15 @@
 import type { Metadata } from 'next';
-
-import './globals.css';
 import { Recursive } from 'next/font/google';
-import Header from '@/components/Header';
+
+import Header from '@/components/header';
+import './globals.css';
+
 export const metadata: Metadata = {
   title: 'Ezra | Portfolio',
   description:
     'Ezra Mollena is a full-stack developer with 4 years of experience',
 };
-const recursive = Recursive({
-  subsets: ['latin'],
-  weight: '400',
-
-  preload: false,
-});
+const recursive = Recursive({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,

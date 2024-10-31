@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Download, MoveRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import GithubIcon from './GithubIcon';
-import LinkedinIcon from './LinkedinIcon';
+import GithubIcon from './github-icon';
+import LinkedinIcon from './linkedin-icon';
 
 const Intro = () => {
   return (
