@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const Header = () => {
+const Navbar = () => {
   const activeSection = 'Home';
   return (
     <header className='z-[999] relative'>
@@ -14,7 +14,7 @@ const Header = () => {
         animate={{ y: 0, x: '-50%', opacity: 1 }}
       >
         <nav className='flex h-12 py-2  sm:h-[initial] sm:py-0'>
-          <ul className='flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5'>
+          <ul className='flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-slate-500 sm:w-[initial] sm:flex-nowrap sm:gap-5'>
             {links.map((link) => (
               <motion.li
                 className='h-3/4 flex items-center justify-center relative'
@@ -24,9 +24,9 @@ const Header = () => {
               >
                 <Link
                   className={clsx(
-                    'flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300',
+                    'flex w-full items-center justify-center px-3 py-3 hover:text-slate-950 transition dark:text-slate-500 dark:hover:text-slate-300',
                     {
-                      'text-gray-950 dark:text-gray-200':
+                      'text-slate-950 dark:text-slate-200':
                         activeSection === link.name,
                     }
                   )}
@@ -40,7 +40,7 @@ const Header = () => {
 
                   {link.name === activeSection && (
                     <motion.span
-                      className='bg-slate-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-800'
+                      className='bg-slate-200 rounded-full absolute inset-0 -z-10 dark:bg-slate-800'
                       layoutId='activeSection'
                       transition={{
                         type: 'spring',
@@ -59,4 +59,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

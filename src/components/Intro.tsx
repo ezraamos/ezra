@@ -8,7 +8,10 @@ import LinkedinIcon from './linkedin-icon';
 
 const Intro = () => {
   return (
-    <section className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
+    <section
+      className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'
+      id='home'
+    >
       <div className='flex items-center justify-center'>
         <div className='relative'>
           <motion.div
@@ -22,8 +25,8 @@ const Intro = () => {
             <Image
               src='/avatar.jpg'
               alt='ezra portrait'
-              width={300}
-              height={300}
+              width={300} // Set appropriate width
+              height={300} // Set appropriate height
               priority={true}
               className='h-24 w-24 overflow-hidden rounded-full border-[0.35rem] border-white shadow-xl object-cover '
             />
@@ -44,7 +47,7 @@ const Intro = () => {
         </div>
       </div>
       <motion.h1
-        className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
+        className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-slate-950'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >

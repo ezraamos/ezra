@@ -5,14 +5,14 @@ import SectionHeading from './section-heading';
 const About = () => {
   return (
     <motion.section
-      className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40'
+      className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28'
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id='about'
     >
       <SectionHeading label='about me' />
-      <p className='mb-3'>
+      <p className='mb-3 text-slate-900'>
         I graduated in <span className='font-medium'>Marine Engineering</span>{' '}
         and spent three years working overseas before discovering my passion for
         programming. What started as curiosity led me to a coding bootcamp and
@@ -23,9 +23,9 @@ const About = () => {
         like finding that fix.
       </p>
 
-      <p>
+      <p className=' text-slate-900'>
         My tech stack includes{' '}
-        <span className='font-medium'>
+        <span className='font-medium '>
           React, Next.js, Node.js, MongoDB, PostgreSQL, TypeScript, Prisma,
           Drizzle
         </span>
