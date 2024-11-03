@@ -3,9 +3,10 @@ import { links } from '@/lib/data';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const Navbar = () => {
-  const activeSection = 'Home';
+  const [activeSection, setActiveSection] = useState('Home');
   return (
     <header className='z-[999] relative'>
       <motion.div
@@ -31,10 +32,7 @@ const Navbar = () => {
                     }
                   )}
                   href={link.hash}
-                  // onClick={() => {
-                  //   setActiveSection(link.name);
-                  //   setTimeOfLastClick(Date.now());
-                  // }}
+                  onClick={() => setActiveSection(link.name)}
                 >
                   {link.name}
 
