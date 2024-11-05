@@ -115,6 +115,7 @@ export const skillsData = [
   'Zustand',
   'Express',
   'PostgreSQL',
+  'OpenAi',
   'Framer Motion',
 ] as const;
 
