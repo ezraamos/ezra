@@ -65,6 +65,14 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: 'Delve and Dine',
+    description:
+      'An app that suggests recipes users can make with ingredients they have, helping reduce food waste and streamline meal planning.',
+    tags: ['Next.js', 'Typescript', 'Shadcn-ui', 'Tailwind', 'Spoonacular API'],
+    imageUrl: '/delve-and-dine.png',
+    appUrl: 'https://delve-and-dine.vercel.app/',
+  },
+  {
     title: 'TalkToMe-Doc',
     description:
       'An innovative platform transforming static documents into interactive experiences with real-time AI responses.',
