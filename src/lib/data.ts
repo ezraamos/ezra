@@ -78,7 +78,7 @@ export const projectsData = [
       'Stripe',
     ],
     imageUrl: '/talktome.png',
-    appUrl: 'https://talktome-doc-dn8r.vercel.app/',
+    appUrl: 'https://talktome-doc.vercel.app/',
   },
   {
     title: 'Caseme',
