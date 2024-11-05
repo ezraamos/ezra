@@ -38,52 +38,64 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Graduated bootcamp',
-    location: 'Miami, FL',
+    title: 'Graduated bootcamp | Zuitt',
+    location: 'Quezon City, Metro Manila',
     description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
+      '360 hours of 360 hours of coding using : Javascript, MongoDb, ExpressJs, NodeJs, ReactJs, NextJs and cloud services such as Vercel, Heroku and MongoDB atlas. Map integration, Data Reporting/Visualization, and Software development Lifecycles were also trained.',
     icon: React.createElement(GraduationCap),
-    date: '2019',
+    date: '2020',
   },
   {
-    title: 'Front-End Developer',
-    location: 'Orlando, FL',
+    title: 'Full-Stack Developer | epico',
+    location: 'Singapore, Singapore',
     description:
-      'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
+      'I worked as a full-stack developer for almost 3 years at a startup company that developed a webcomic platform for readers and scanlators, using Next.js and TypeScript for the frontend and Node.js on AWS for the backend.',
     icon: React.createElement(Briefcase),
-    date: '2019 - 2021',
+    date: '2020 - 2023',
   },
   {
-    title: 'Full-Stack Developer',
-    location: 'Houston, TX',
+    title: 'Full-Stack Developer | Lanex Corporation',
+    location: 'Cebu City, Philippines',
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      'Currently working as a full-stack developer in a software development company, handling end-to-end development mostly with React and Next.js for the frontend,and Node.js for the Backend.',
     icon: React.createElement(Briefcase),
-    date: '2021 - present',
+    date: '2023 - present',
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: 'CorpComment',
+    title: 'TalkToMe-Doc',
     description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
-    imageUrl: '/corpcomment.png',
+      'An innovative platform transforming static documents into interactive experiences with real-time AI responses.',
+    tags: [
+      'Next.js',
+      'Typescript',
+      'Drizzle',
+      'Openai',
+      'Pinecone',
+      'S3',
+      'Stripe',
+    ],
+    imageUrl: '/talktome.png',
+    appUrl: 'https://talktome-doc-dn8r.vercel.app/',
   },
   {
-    title: 'rmtDev',
+    title: 'Caseme',
     description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: '/rmtdev.png',
-  },
-  {
-    title: 'Word Analytics',
-    description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-    imageUrl: '/wordanalytics.png',
+      'An ecommerce application where users can create custom phone cases featuring their favorite images.',
+    tags: [
+      'Next.js',
+      'Typescript',
+      'Tailwind',
+      'Shadcn-ui',
+      'Prisma',
+      'NeonDB',
+      'S3',
+      'Stripe',
+    ],
+    imageUrl: '/caseme.png',
+    appUrl: 'https://caseme-teal.vercel.app/',
   },
 ] as const;
 
@@ -100,7 +112,27 @@ export const skillsData = [
   'Prisma',
   'Drizzle',
   'MongoDB',
+  'Zustand',
   'Express',
   'PostgreSQL',
   'Framer Motion',
+] as const;
+
+export const certificatesData = [
+  {
+    name: 'AWS Certified Solutions Architect – Associate',
+    imageUrl: '/saa-badge.png',
+    certUrl:
+      'https://www.credly.com/badges/7312c6a6-281a-4e53-97b6-6e50b7de0108',
+  },
+  {
+    name: 'Zuitt Award',
+    imageUrl: '/zuitt-award.png',
+    certUrl: undefined,
+  },
+  {
+    name: 'Zuitt BootCamp Complettion',
+    imageUrl: '/zuitt-completion.png',
+    certUrl: undefined,
+  },
 ] as const;
