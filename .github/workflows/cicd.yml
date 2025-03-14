@@ -16,6 +16,9 @@ jobs:
       - name: Create .env file
         run: echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env
 
+      - name: Install Docker Compose
+        run: sudo apt-get update && sudo apt-get install -y docker-compose-plugin
+
       - name: Build Docker image
         run: docker-compose build
 
