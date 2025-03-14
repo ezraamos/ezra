@@ -36,4 +36,4 @@ jobs:
         run: docker compose down
 
       - name: Start new container
-        run: docker compose up -d
+        run: docker compose up -d --force-recreate --remove-orphans
