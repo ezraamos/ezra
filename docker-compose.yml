@@ -6,7 +6,7 @@ services:
     image: ezraamos/portfolio:latest
     container_name: nextjs-app-container
     ports:
-      - '80:7777'
+      - '80:3000'
     environment:
       - RESEND_API_KEY=${RESEND_API_KEY}
     restart: unless-stopped
