@@ -13,9 +13,6 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v4
 
-      - name: Create .env file
-        run: echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" > .env
-
       - name: Copy docker-compose.yml to EC2
         uses: appleboy/scp-action@v0.1.4
         with:
@@ -51,6 +48,7 @@ jobs:
           script: |
             docker pull ezraamos/portfolio:${{ github.sha }}
             cd app
+            echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" > .env
             docker-compose down || true
-            docker-compose up --build -d
+            docker-compose up -d
             docker image prune -a -f
