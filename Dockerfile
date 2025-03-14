@@ -10,4 +10,6 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
 
-CMD ["pnpm", "start"]
+EXPOSE 7777
+
+CMD ["pnpm", "start", "-p", "7777"]
