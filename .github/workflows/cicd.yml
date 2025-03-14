@@ -16,17 +16,14 @@ jobs:
       - name: Create .env file
         run: echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env
 
-      - name: Install Docker Compose
-        run: sudo apt-get update && sudo apt-get install -y docker-compose-plugin
-
       - name: Build Docker image
-        run: docker-compose build
+        run: docker compose build
 
       - name: Login to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Push Docker image to Docker Hub
-        run: docker-compose push
+        run: docker compose push
 
   deploy:
     needs: build
