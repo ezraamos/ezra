@@ -50,6 +50,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker pull ezraamos/portfolio:${{ github.sha }}
+            cd app
             docker-compose down || true
             docker-compose up --build -d
-            docker image prune -f
+            docker image prune -a -f
