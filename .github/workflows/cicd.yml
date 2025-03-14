@@ -31,11 +31,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Deploy to EC2 using SSH
         uses: appleboy/ssh-action@v1.2.2
         with:
-          host: ec2-54-215-57-214.us-west-1.compute.amazonaws.com
+          host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
