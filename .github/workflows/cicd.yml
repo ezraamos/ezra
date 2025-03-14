@@ -33,6 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
       - name: Deploy to EC2 using SSH
         uses: appleboy/ssh-action@v1.2.2
         with:
