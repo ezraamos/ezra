@@ -7,6 +7,6 @@ services:
     container_name: nextjs-app-container
     ports:
       - '3000:7777'
-    env_file:
-      - .env
+    environment:
+      - RESEND_API_KEY=${RESEND_API_KEY}
     restart: unless-stopped
