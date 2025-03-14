@@ -40,7 +40,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo docker pull ezraamos/portfolio:${{ github.sha }}
-            sudo docker-compose down || true
-            sudo docker-compose up --build -d
-            sudo docker image prune -f
+            docker pull ezraamos/portfolio:${{ github.sha }}
+            docker-compose down || true
+            docker-compose up --build -d
+            docker image prune -f

@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ezraamos/portfolio:latest
+    image: ezraamos/portfolio:${{ github.sha }}
     container_name: nextjs-app-container
     ports:
       - '3000:7777'
