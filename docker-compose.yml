@@ -8,5 +8,6 @@ services:
     ports:
       - '3000:7777'
     environment:
+      - NODE_ENV=production
       - RESEND_API_KEY=${RESEND_API_KEY}
     restart: unless-stopped
