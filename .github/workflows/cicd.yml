@@ -33,8 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - name: List files in repository
-        run: ls -R
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
 
       - name: Copy docker-compose.yml to EC2
         uses: appleboy/scp-action@v0.1.4
