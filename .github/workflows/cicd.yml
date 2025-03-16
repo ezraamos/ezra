@@ -19,25 +19,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push Docker image
+      - name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: .
           push: true
           tags: ezraamos/portfolio:${{ github.sha }}
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Checkout Source Code
-        uses: actions/checkout@v4
-
-      - name: Copy files to EC2 using SCP
-        run: |
-          # Copy docker-compose.yml and .env to /home/ubuntu/app/ on the EC2 instance
-          scp -o StrictHostKeyChecking=no -i ${{ secrets.EC2_SSH_KEY }} \
-            docker-compose.yml .env ubuntu@${{ secrets.EC2_HOST }}:/home/ubuntu/app/
 
       - name: Deploy to EC2 using SSH
         uses: appleboy/ssh-action@v1.2.2
@@ -46,14 +33,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            # Navigate to the app directory
-            cd /home/ubuntu/app
-
-            # Stop and remove existing containers (if any)
+            echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" > .env
             docker-compose down || true
-
-            # Start the application using docker-compose
             docker-compose up -d
-
-            # Clean up unused Docker images
             docker image prune -a -f
